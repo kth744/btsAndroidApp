@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html LANG="ko"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>서부인 네이버 카페</title>
+    
+    <!-- Phonegap.js import -->
+    <script type="text/javascript" charset="utf-8" src="js/egovframework/mbl/cmm/cordova.js"></script>
+    
+    <!-- eGovFrame Common import -->        
+    <link rel="stylesheet" href="css/egovframework/mbl/cmm/busan.min.css" />
+	<link rel="stylesheet" href="css/egovframework/mbl/cmm/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery-1.11.2.min.js"></script>
+    <script>
+	   	var deviceReadyDeferred = $.Deferred();
+		var jqmReadyDeferred = $.Deferred();
+		
+		document.addEventListener("deviceready", onDeviceReady, false);
+		
+		function onDeviceReady() {
+			deviceReadyDeferred.resolve();
+		}
+		
+	    $(document).on("pageinit", function() {
+	                     $.mobile.defaultPageTransition = 'none';
+	                     jqmReadyDeferred.resolve();
+	                     
+		});
+    </script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/modernizr-2.0.4.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/EgovHybrid.js"></script>
+
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/json2.js"></script>
+        
+    <!-- iScroll.js import -->
+    <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+    
+    <!-- Customm CSS import --> 
+    <link rel="stylesheet" href="css/egovframework/mbl/hyb/DeviceInfoAPI.css" />
+ 
+    <!-- Customm js import -->     
+    <script type="text/javascript" charset="utf-8" src="js/egovframework/mbl/hyb/DeviceInfoAPI.js"></script>
+       
+    <script type="text/javascript">
+	    $.when(deviceReadyDeferred, jqmReadyDeferred).then(DeviceAPIInit);
+	
+	    function DeviceAPIInit() {
+	    	$("#main").css("background-image", "url(images/busantoseoul/loading2.png)");
+	    	$("#main").css("background-size", "cover");
+	    	
+	    	window.open("http://m.cafe.naver.com/busantoseoul", "_blank", "location=no");
+	    }
+    </script>    
+        
+</head>
+<body>
+    <!-- main Page -->
+    <div id="main" data-role="page">
+    	<div id="header2" data-role="header" data-theme="z" data-position="fixed" style="background-color: white">
+    		<div data-role="navbar">
+                <ul>
+                    <li><a href="main.html"  data-ajax="false" data-theme="a" style="font-size: 12px; color: #cccccc; font-weight: normal; margin-top: 1px; line-height: 14px; vertical-align: middle;">공지사항</a></li>
+                    <li><a href="naverCafe.html"  data-ajax="false" data-theme="a" class="ui-btn-active ui-state-persist" style="font-size: 12px; color: #111111; font-weight: bold; border-bottom: 3px solid #111111; margin-top: 1px; line-height: 14px; vertical-align: middle;">서부인 카페</a></li>
+                    <li><a href="license.html" data-ajax="false" data-theme="a" style="font-size: 12px; color: #cccccc; font-weight: normal; margin-top: 1px; line-height: 14px; vertical-align: middle;">익명게시판</a></li>
+                </ul>
+            </div>
+    	</div>
+    	
+    	<div id="content" data-role="content"></div>
+    	
+    	<div id="footer2" data-role="footer" data-theme="z" data-position="fixed">
+           
+        </div>
+    </div>
+    
+</body>
+</html>

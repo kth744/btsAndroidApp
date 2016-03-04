@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html LANG="ko"> 
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>서부인 메인 페이지</title>
+    
+    <!-- Phonegap.js import -->
+    <script type="text/javascript" charset="utf-8" src="js/egovframework/mbl/cmm/cordova.js"></script>
+    
+    <!-- eGovFrame Common import -->
+    <link rel="stylesheet" href="css/egovframework/mbl/cmm/busan.min.css" />
+	<link rel="stylesheet" href="css/egovframework/mbl/cmm/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery-1.11.2.min.js"></script>
+    <script>
+	   	var deviceReadyDeferred = $.Deferred();
+		var jqmReadyDeferred = $.Deferred();
+		
+		document.addEventListener("deviceready", onDeviceReady, false);
+		
+		function onDeviceReady() {
+			deviceReadyDeferred.resolve();
+		}
+		
+	    $(document).on("pageinit", function() {
+	                     $.mobile.defaultPageTransition = 'none';
+	                     jqmReadyDeferred.resolve();
+	                     
+		});
+    </script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/modernizr-2.0.4.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/EgovMobile-1.4.5.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/EgovHybrid.js"></script>
+
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/egovframework/mbl/cmm/json2.js"></script>
+        
+    <!-- iScroll.js import -->
+    <script type="text/javascript" src="js/iscroll/iscroll.js"></script>
+ 
+    <!-- Customm CSS import --> 
+    <link rel="stylesheet" href="css/egovframework/mbl/hyb/DeviceInfoAPI.css" />
+   
+    <!-- Customm js import -->     
+    <script type="text/javascript" charset="utf-8" src="js/egovframework/mbl/hyb/DeviceInfoAPI.js"></script>
+       
+    <script type="text/javascript">
+	    $.when(deviceReadyDeferred, jqmReadyDeferred).then(DeviceAPIInit);
+	
+	    function DeviceAPIInit() {
+	    	
+	    }
+    </script>    
+        
+</head>
+<body>
+    <!-- main Page -->
+    <div id="main" data-role="page">
+    	<div id="header2" data-role="header" data-theme="z" data-position="fixed" style="background-color: white">
+    		<div data-role="navbar">
+                <ul>
+                    <li><a href="main.html"  data-ajax="false" data-theme="a" class="ui-btn-active ui-state-persist" style="font-size: 12px; color: #111111; font-weight: bold; border-bottom: 3px solid #111111; margin-top: 1px; line-height: 14px; vertical-align: middle;">공지사항</a></li>
+                    <li><a href="naverCafe.html"  data-ajax="false" data-theme="a" style="font-size: 12px; color: #cccccc; font-weight: normal; margin-top: 1px; line-height: 14px; vertical-align: middle;">서부인 카페</a></li>
+                    <li><a href="license.html" data-ajax="false" data-theme="a" style="font-size: 12px; color: #cccccc; font-weight: normal; margin-top: 1px; line-height: 14px; vertical-align: middle;">익명게시판</a></li>
+                </ul>
+            </div>
+    	</div>
+    	
+    	<div id="content" data-role="content">
+    	
+    		<div style="height: 40px; padding-left: 10px; padding-right: 10px;">
+    			<div style="float: left">
+	    			<span style="font-size: 14px">[서부인 공지] 2016년 3월 회의공지</span>
+	    			<br>
+	    			<span style="font-size: 10px">81서미순</span><span style="display: inline-block; vertical-align: middle; font-size: 8px; font-weight: bold; color: white; background-color: red; margin: 2px 0px 0px 4px; padding: 0px 3px 0px 3px;">STEP</span>
+	    			<br>
+	    		</div>
+	    		
+	    		<div style="float: right; font-size: 12px; margin-top: 12px;">76</div>
+    		</div>
+    		
+    		<hr style="border: 0px; border-top: 1px solid #dddddd;">
+    		
+    		<div style="height: 40px; padding-left: 10px; padding-right: 10px;">
+    			<div style="float: left">
+	    			<span style="font-size: 14px">[서부인 공지] 서부인 10월 회의 공지사항</span>
+	    			<br>
+	    			<span style="font-size: 10px">81서미순</span>
+	    			<br>
+	    		</div>
+	    		
+	    		<div style="float: right; font-size: 12px; margin-top: 12px;">221</div>
+    		</div>
+    		
+    		<hr style="border: 0px; border-top: 1px solid #dddddd;">
+    		
+    		<div style="height: 40px; padding-left: 10px; padding-right: 10px;">
+    			<div style="float: left;">
+	    			<span style="font-size: 14px">[서부인공지]서부인 7월 공지사항</span>
+	    			<br>
+    				<span style="font-size: 10px">84김범희</span><span style="display: inline-block; vertical-align: middle; font-size: 8px; font-weight: bold; color: white; background-color: blue; margin: 2px 0px 0px 4px; padding: 0px 3px 0px 3px;">MASTER</span>
+	    		</div>
+	    		
+	    		<div style="float: right; font-size: 12px; margin-top: 12px;">1,179</div>
+    		</div>
+    		
+    		<hr style="border: 0px; border-top: 1px solid #dddddd;">
+    		
+    		<div style="height: 40px; padding-left: 10px; padding-right: 10px;">
+    			<div style="float: left">
+	    			<span style="font-size: 14px">[서부인공지]서부인 5월 회의 공지사항</span>
+	    			<br>
+	    			<span style="font-size: 10px">88김세라</span>
+	    			<br>
+	    		</div>
+	    		
+	    		<div style="float: right; font-size: 12px; margin-top: 12px;">234</div>
+    		</div>
+    	
+    	</div>
+    	
+    	<div id="footer2" data-role="footer" data-theme="z" data-position="fixed">
+           
+        </div>
+    </div>
+    
+</body>
+</html>
